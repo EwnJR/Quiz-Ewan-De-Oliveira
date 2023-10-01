@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <title>Quiz me connaissez-vous</title>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h1>Quiz me connaissez-vous ?</h1>
+
+  <div id="progress"></div> <!-- Affiche la progression -->
+  <div id="result"></div>
+
+
+  <div class="question" id="question1">
+    <p>Comment je me nomme ?</p>
+    <div class="options">
+      <label for="ewandeoliveira" class="city-option">
+        <input type="radio" name="q1" id="ewandeoliveira" value="ewandeoliveira">
+        Ewan De Oliveira
+      </label>
+      <label for="Brendan Eich" class="city-option">
+        <input type="radio" name="q1" id="Brendan Eich" value="Brendan Eich">
+        Brendan Eich
+      </label>
+      <label for="Tim Berners-Lee" class="city-option">
+        <input type="radio" name="q1" id="Tim Berners-Lee" value="Tim Berners-Lee">
+        Tim Berners-Lee
+      </label>
+    </div>
+    <div class="explanation" id="explanation1"></div>
+    <button onclick="nextQuestion(1)">Suivant</button>
+  </div>
+
+  <div class="question" id="question2" style="display: none;">
+    <p>Ou se situe mon école ?</p>
+    <div class="options">
+      <label for="paris2" class="city-option">
+        <input type="radio" name="q2" id="paris2" value="paris">
+        Paris
+      </label>
+      <label for="rennes" class="city-option">
+        <input type="radio" name="q2" id="rennes" value="rennes">
+        Rennes
+      </label>
+      <label for="lyon" class="city-option">
+        <input type="radio" name="q2" id="lyon" value="lyon">
+        Lyon
+      </label>
+    </div>
+    <div class="explanation" id="explanation2"></div>
+    <button onclick="nextQuestion(2)">Suivant</button>
+  </div>
+
+  <div class="question" id="question3" style="display: none;">
+    <p>Dans quel ville je réside ?</p>
+    <div class="options">
+      <label for="lesmureaux" class="city-option">
+        <input type="radio" name="q3" id="lesmureaux" value="lesmureaux">
+        Les Mureaux
+      </label>
+      <label for="paimpol" class="city-option">
+        <input type="radio" name="q3" id="paimpol" value="paimpol">
+        Paimpol
+      </label>
+      <label for="lyon" class="city-option">
+        <input type="radio" name="q3" id="lyon" value="lyon">
+        Lyon
+      </label>
+    </div>
+    <div class="explanation" id="explanation3"></div>
+    <button onclick="nextQuestion(3)">Suivant</button>
+  </div>
+
+  <div class="question" id="question4" style="display: none;">
+    <p>Quel est mon niveau d'anglais ?</p>
+    <div class="options">
+      <label for="debutant" class="city-option">
+        <input type="radio" name="q4" id="debutant" value="debutant">
+        Débutant
+      </label>
+      <label for="expert" class="city-option">
+        <input type="radio" name="q4" id="expert" value="expert">
+        Expert
+      </label>
+      <label for="intermediaire" class="city-option">
+        <input type="radio" name="q4" id="intermediaire" value="intermediaire">
+        intermédiaire
+      </label>
+    </div>
+    <div class="explanation" id="explanation4"></div>
+    <button onclick="nextQuestion(4)">Suivant</button>
+  </div>
+
+  <div class="question" id="question5" style="display: none;">
+    <p>J'ai combien de loisirs ?</p>
+    <div class="options">
+      <label for="5" class="city-option">
+        <input type="radio" name="q5" id="5" value="5">
+        5
+      </label>
+      <label for="7" class="city-option">
+        <input type="radio" name="q5" id="7" value="7">
+        7
+      </label>
+      <label for="3" class="city-option">
+        <input type="radio" name="q5" id="3" value="3">
+        3
+      </label>
+    </div>
+    <div class="explanation" id="explanation5"></div>
+    <button onclick="nextQuestion(5)">Suivant</button>
+  </div>
+
+  <div class="question" id="question6" style="display: none;">
+    <p>Je connais combien de langages de programmation ?</p>
+    <div class="options">
+      <label for="2langages" class="city-option">
+        <input type="radio" name="q6" id="2langages" value="2langages">
+        2 langages
+      </label>
+      <label for="5langages" class="city-option">
+        <input type="radio" name="q6" id="5langages" value="5langages">
+        5 langages
+      </label>
+      <label for="6langages" class="city-option">
+        <input type="radio" name="q6" id="6langages" value="6langages">
+        6 langages
+      </label>
+    </div>
+    <div class="explanation" id="explanation6"></div>
+    <button onclick="nextQuestion(6)">Suivant</button>
+  </div>
+
+  <div class="question" id="question7" style="display: none;">
+    <p>Quel est mon type de permis ?</p>
+    <div class="options">
+      <label for="permisb" class="city-option">
+        <input type="radio" name="q7" id="permisb" value="permisb">
+        Permis B
+      </label>
+      <label for="aucun" class="city-option">
+        <input type="radio" name="q7" id="aucun" value="aucun">
+        Aucun
+      </label>
+      <label for="permisa2" class="city-option">
+        <input type="radio" name="q7" id="permisa2" value="permisa2">
+        Permis A2
+      </label>
+    </div>
+    <div class="explanation" id="explanation7"></div>
+    <button onclick="nextQuestion(7)">Suivant</button>
+  </div>
+
+  <div class="question" id="question8" style="display: none;">
+    <p>Quel est mon diplôme actuel ?</p>
+    <div class="options">
+      <label for="bacpro" class="city-option">
+        <input type="radio" name="q8" id="bacpro" value="bacpro">
+        Bac Pro
+      </label>
+      <label for="bacs" class="city-option">
+        <input type="radio" name="q8" id="bacs" value="bacs">
+        Bac S
+      </label>
+      <label for="bts" class="city-option">
+        <input type="radio" name="q8" id="bts" value="bts">
+        BTS (bac +2)
+      </label>
+    </div>
+    <div class="explanation" id="explanation8"></div>
+    <button onclick="nextQuestion(8)">Suivant</button>
+  </div>
+
+  <div class="question" id="question9" style="display: none;">
+    <p>Quel niveau d'étude je vise ?</p>
+    <div class="options">
+      <label for="licence" class="city-option">
+        <input type="radio" name="q9" id="licence" value="licence">
+        Licence
+      </label>
+      <label for="master1" class="city-option">
+        <input type="radio" name="q9" id="master1" value="master1">
+        Master 1
+      </label>
+      <label for="master2" class="city-option">
+        <input type="radio" name="q9" id="master2" value="master2">
+        Master 2
+      </label>
+    </div>
+    <div class="explanation" id="explanation9"></div>
+    <button onclick="nextQuestion(9)">Suivant</button>
+  </div>
+
+  <div class="question" id="question10" style="display: none;">
+    <p>j'ai déjà effectué des stages ?</p>
+    <div class="options">
+      <label for="oui" class="city-option">
+        <input type="radio" name="q10" id="oui" value="oui">
+        Oui
+      </label>
+      <label for="oui5" class="city-option">
+        <input type="radio" name="q10" id="oui5" value="oui5">
+        Oui, 5
+      </label>
+      <label for="nonaucun" class="city-option">
+        <input type="radio" name="q10" id="nonaucun" value="nonaucun">
+        Non aucun
+      </label>
+    </div>
+    <div class="explanation" id="explanation10"></div>
+    <button onclick="nextQuestion(10)">Suivant</button>
+  </div>
+
+<!-- ... Vos questions ... -->
+
+<!-- Div pour afficher les résultats -->
+<div id="result"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
