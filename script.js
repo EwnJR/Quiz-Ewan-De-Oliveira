@@ -54,7 +54,7 @@ function nextQuestion(questionNumber) {
     if (answerValue === "5") {
       score++;
     }
-    
+
   }
 
   if (currentQuestionElement) {
@@ -101,7 +101,7 @@ function updateProgress() {
 
 function displayResult() {
   const resultElement = document.getElementById("result");
-  resultElement.innerHTML = `<h2>Résultats du quiz</h2><p>Votre score est ${score} sur ${totalQuestions} questions.</p>`;
+  resultElement.innerHTML = `<h2>Résultats du quizz</h2><p>Votre score est de ${score} sur ${totalQuestions} questions.</p>`;
 
   // Afficher un message en fonction du score
   let message = "";
