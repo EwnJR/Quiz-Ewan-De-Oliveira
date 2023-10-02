@@ -51,9 +51,10 @@ function nextQuestion(questionNumber) {
       score++;
     }
 
-    if (answerValue === "oui5") {
+    if (answerValue === "5") {
       score++;
     }
+    
   }
 
   if (currentQuestionElement) {
@@ -105,7 +106,7 @@ function displayResult() {
   // Afficher un message en fonction du score
   let message = "";
   if (score >= 8 && score <= 10) {
-    message = "C'est super ! Vous avez gagné le droit de me contacter aux 06 17 84 14 80 ou sur mon mail : de.oliveira.ewan@gmail.com";
+    message = "C'est super ! Pour me connaitre davantage, contactez-moi au 06 17 84 14 80 ou sur mon mail : de.oliveira.ewan@gmail.com";
   } else if (score >= 5) {
     message = "C'est déjà bien mais pour avoir une meilleure note vous pouvez me contacter aux 06 17 84 14 80 ou sur mon mail : deoliveira.ewan@gmail.com";
   } else {
